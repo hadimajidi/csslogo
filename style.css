@@ -13,42 +13,18 @@ body {
     border-radius: 10px;
 }
 
-svg.first {
-    width: 300px;
-    height: 300px;
-    transition: all 1s ease-in-out;
-    overflow: visible;
-}
-
-svg.first:hover {
-    transform: rotate(90deg);
-}
-
-svg.first:hover g#start {
-    transform: translateX(-5%);
-}
-svg.first:hover g#end {
-    transform: translateX(5%);
-}
-
-g#end,
-g#start,
-g#mid,
-g#end2,
-g#mid2 {
+g#finish,
+g#begin,
+g#finish2 {
     transition: all 1s ease-in-out;
 }
 
-svg.second {
+svg {
     width: 300px;
     height: 300px;
 }
 
-svg.second g#end2 {
-    transform: translateX(-100%);
-    fill: #124567;
-}
-svg.second g#mid2 {
+svg g#finish {
     transform: translateX(-100%);
     fill: #124567;
 }
@@ -56,17 +32,10 @@ svg.second g#mid2 {
 /* svg.second:hover g#start {
     transform: translateX(-5%);
 } */
-svg.second:hover g#end {
+svg:hover g#finish2 {
     transform: translateX(100%);
     opacity: 0;
 }
-svg.second:hover g#mid {
-    transform: translateX(100%);
-    opacity: 0;
-}
-svg.second:hover g#end2 {
-    transform: translateX(0%);
-}
-svg.second:hover g#mid2 {
+svg:hover g#finish {
     transform: translateX(0%);
 }
