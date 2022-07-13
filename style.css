@@ -1,126 +1,32 @@
-* {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-}
-
 body {
-    font-size: 16px;
-    display: grid;
-    grid-template-areas:
-        "nav nav nav"
-        "scaside mc staside"
-        "footer footer footer";
+    background: #124567;
 }
 
-img {
-    width: 100%;
-}
-
-section,
-main {
-    padding: 1rem;
-    margin: 1rem;
-}
-
-.container_nav {
-    max-width: 90%;
-    margin: 0 auto;
+.holder {
+    max-width: 50%;
+    margin: 25vh auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-}
-
-nav {
-    position: relative;
-    grid-area: nav;
-    padding: 1rem;
+    padding: 3rem;
     background: #ccc;
-    margin-bottom: 1rem;
+    border-radius: 10px;
 }
 
-nav ul {
-    display: flex;
-    gap: 3rem;
+svg {
+    width: 300px;
+    height: 300px;
+    transition: all 1s ease-in-out;
+    overflow: visible;
 }
 
-nav .image {
-    max-width: 50px;
-    max-height: 50px;
-    animation: logo 1.5s ease-in-out 0s infinite normal none;
-    transition: all ease-in-out 2s;
+svg:hover {
+    transform: rotate(90deg);
 }
 
-nav .image:hover {
-    transform: rotate(360deg);
+svg:hover g#start {
+    transform: translateX(-5%);
 }
-
-@keyframes logo {
-    /* to {
-        transform: scale(0.5, 0.5);
-    } */
-    0% {
-        transform: scale(1, 1);
-        /* transform: rotate(0deg);
-        max-width: 50px; */
-    }
-    25% {
-        transform: scale(1.15, 1.15);
-        /* transform: rotate(90deg);
-        max-width: 55px; */
-    }
-    50% {
-        transform: scale(1.3, 1.3);
-        /* transform: rotate(90deg);
-        max-width: 60px; */
-    }
-    75% {
-        transform: scale(1.15, 1.15);
-        /* transform: rotate(90deg);
-        max-width: 55px; */
-    }
-    100% {
-        transform: scale(1, 1);
-        /* transform: rotate(90deg);
-        max-width: 50px; */
-    }
-}
-
-.posts {
-    margin: 1.5rem;
-}
-
-section.scrollable-aside {
-    grid-area: scaside;
-    background: #ccc;
-    overflow: scroll;
-    height: 100vh;
-    border-radius: 5px;
-}
-
-section.scrollable-aside ul li {
-    padding: 1rem;
-}
-
-section.sticky-aside {
-    grid-area: staside;
-    position: relative;
-}
-
-section.sticky-aside .info {
-    padding: 1rem;
-    position: sticky;
-    top: 10px;
-    background: #ccc;
-    border-radius: 5px;
-}
-
-footer {
-    grid-area: footer;
-    background: #ccc;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 1rem;
+svg:hover g#end {
+    transform: translateX(5%);
 }
