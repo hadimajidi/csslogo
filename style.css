@@ -13,29 +13,44 @@ body {
     border-radius: 10px;
 }
 
-g#finish,
-g#begin,
-g#finish2 {
+#header-shape-gradient {
+    --color-stop: #f12c06;
+    --color-bot: #faed34;
+}
+
+g#end,
+g#start,
+g#end2,
+svg {
     transition: all 1s ease-in-out;
 }
 
 svg {
     width: 300px;
     height: 300px;
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
-svg g#finish {
-    transform: translateX(-100%);
-    fill: #124567;
+svg g#end {
+    transform: translateX(-110%);
+    border: 1px solid red;
+    fill: url(#header-shape-gradient);
+    /* filter: url(#shadow); */
 }
 
 /* svg.second:hover g#start {
     transform: translateX(-5%);
 } */
-svg:hover g#finish2 {
+
+svg:hover {
+    filter: drop-shadow(10px 12px 2px rgb(0 0 0 / 0.4));
+    transform: scale(1.05, 1.05);
+}
+
+svg:hover g#end2 {
     transform: translateX(100%);
     opacity: 0;
 }
-svg:hover g#finish {
+svg:hover g#end {
     transform: translateX(0%);
 }
