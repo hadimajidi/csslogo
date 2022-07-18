@@ -14,8 +14,8 @@ body {
 }
 
 #header-shape-gradient {
-    --color-stop: #f12c06;
-    --color-bot: #faed34;
+    /* --color-stop: #f12c06;
+    --color-bot: #faed34; */
 }
 
 g#end,
